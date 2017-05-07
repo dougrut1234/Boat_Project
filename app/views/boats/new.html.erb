@@ -1,0 +1,25 @@
+<h1>Create Boat</h1>
+
+<div>
+<p>
+<%= form_for @boat do |form| %>   
+<%= form.label :name %>:   
+<%= form.text_field :name %>  
+</p>
+
+<p>
+Location: <%= form.select(:location, options_for_select([['New York City', 'New York City'], ['Los Angeles', 'Los Angeles'], ['Seattle', 'Seattle'], ['Miami', 'Miami'], ['San Francisco', 'San Francisco']]))%>
+</p> 
+
+<p>
+<%= form.label :amount_of_containers %>:   
+<%= form.text_field :amount_of_containers %>
+</p>
+
+</div>
+
+
+<%= form.submit "Create" %>
+<% end %>
+
+

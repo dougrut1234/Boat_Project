@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+#board {
+	font-family: impact;
+	font-size: 84px;
+	margin-left: 100px;
+	background-color: gray;
+	padding-left: 400px;
+	padding-right: 400px;
+}
+
+#board2 {
+	font-family: impact;
+	font-size: 84px;
+	margin-left: 100px;
+	background-color: gray;
+	padding-left: 300px;
+	padding-right: 300px;
+}
+
+#color {
+	background-color: aqua;
+	padding: 1px;
+}
+
+h4 {
+	font-family: arial;
+	font-size: 21px;
+	margin-left: 20px;
+}
+
+h3 {
+	margin-left: 40px;
+}
+
+#job_color {
+	background-color: #00FF7F;
+	padding: 3px;
+}
+
+#cover_image {
+	background-image: "boat.jpg";
+}
+
+#notice {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+#alert {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+#text_area {
+	margin-top: 5px;
+}

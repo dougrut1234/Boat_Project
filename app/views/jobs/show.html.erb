@@ -1,0 +1,19 @@
+<h1><%= @job.description%> <%= @job.description%></h1>
+
+
+<p<strong><%= @job.description%></strong></p>
+
+
+<% @boats.each do |b| %>
+
+<p>
+<%=b.name %>: <%=b.location %>
+</p>
+
+<p>
+<!-- The post_path(p) takes you to the author of the post. -->
+ <%= link_to("Assign Boat", assign_job_path(@job.id, b.id)) %>
+ </p>
+ <p>
+
+<% end %>

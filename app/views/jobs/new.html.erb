@@ -1,0 +1,33 @@
+<h1>Create A Job</h1>
+<!-- This CREATES the user...since Create corresponds to NEW -->
+
+<div>
+<p>
+<%= form_for @job do |form| %>   
+<%= form.label :description %>:   
+<div id = "text_area"> <%= form.text_area :description %></div>
+</p>
+
+<p>
+Location: <%= form.select(:origin, options_for_select([['New York City', 'New York City'], ['Los Angeles', 'Los Angeles'], ['Seattle', 'Seattle'], ['Miami', 'Miami'], ['San Francisco', 'San Francisco']]))%> 
+</p> 
+
+<p>
+Destination: <%= form.select(:destination, options_for_select([['London', 'London'], ['Cape Town', 'Cape Town'], ['Tokyo', 'Tokyo'], ['Vancouver', 'Vancouver'], ['Melbourne', 'Melbourne']]))%> 
+</p>
+
+<p>
+<%= form.label :cost %>: (must be at least $1000.00)   
+<%= form.text_field :cost %>
+</p>
+
+<p>
+<%= form.label :amount_of_containers %>:   
+<%= form.text_field :amount_of_containers %>
+</p>
+</div>
+
+
+<%= form.submit "Create" %>
+<% end %>
+

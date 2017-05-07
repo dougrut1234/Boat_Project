@@ -1,0 +1,21 @@
+<strong id="board2">AVAILABLE BOATS</strong>
+<h3><%= link_to("Create New Boat", "/boats/new")%></h3> <h3><%= link_to("Available Jobs", "/jobs/")%></h3>
+
+<body id="color">
+</body>
+
+	<% @boats.each do |b| %>
+  <div id="job_color">
+  	<h4>Boat Name: <%= b.name %></h4>
+  	<h4>Location: <%= b.location %></h4>
+  	<h4>Amount of containers: <%= b.amount_of_containers %></h4>
+ <p>
+ 
+ 	<h3><%= link_to("Cancel", boat_path(b), method: :delete) %></h3>
+
+
+ </p>
+ </div>
+    </li>
+  <% end %>
+</ul>

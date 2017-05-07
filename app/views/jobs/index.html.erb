@@ -1,0 +1,22 @@
+<strong id="board">JOB BOARD</strong>
+
+<body id="color">
+</body>
+<% @jobs.each do |job| %>
+
+  <div id="job_color">
+  	<h4>Duty: <%= job.description %></h4>
+  	<h4>Starting Point: <%= job.origin %></h4>
+  	<h4>Destination: <%= job.destination %></h4>
+  	<h4>Cost: $<%= job.cost %></h4>
+  	<h4>Number of Containers: <%= job.amount_of_containers %></h4>
+
+ <p>
+ 	
+ 	<h3><%= link_to("show", job_path(job)) %></h3>
+ </p>
+ 	<h3><%= link_to("Terminate", job_path(job), method: :delete) %></h3>
+ </p>
+ </div>
+ <% end %>
+ 
