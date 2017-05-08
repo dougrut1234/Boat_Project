@@ -7,6 +7,7 @@ end
 def show
 	@job = Job.find(params[:id])
 	@boats = Boat.all
+	@jobs = Job.all
 end
 
 def new

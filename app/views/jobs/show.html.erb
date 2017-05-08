@@ -1,8 +1,9 @@
-<body id = "job_color">
+<body id = "job_color"></body>
 
 <div id="board4">
 <h1><%= @job.description%> <%= @job.description%></h1>
 </div>
+
 
 <div id="board3">
 <h2>Available Boats</h2>
@@ -14,11 +15,13 @@
 <h3>Starting Point: <%=b.location %></h3>
 </p>
 
+
 <p>
 <!-- The post_path(p) takes you to the author of the post. -->
 <p id="cancel"><%= link_to("Assign Boat", assign_job_path(@job.id, b.id)) %></p>
  </p>
+
  
 <% end %>
 
-</body>
+
