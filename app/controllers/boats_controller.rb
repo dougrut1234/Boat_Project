@@ -45,7 +45,7 @@ def destroy
 private
     
     def boat_params
-      params.require(:boat).permit(:name, :location, :amount_of_containers)
+      params.require(:boat).permit(:name, :location, :amount_of_containers, :avatar)
     
     end
 end

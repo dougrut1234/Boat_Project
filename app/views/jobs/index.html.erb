@@ -2,6 +2,10 @@
 
 <body id="color">
 </body>
+
+<h2><%= link_to("Create New Job", "/jobs/new/") %></h2>
+<h2><%= link_to("View Boats", "/boats/") %></h2>
+
 <% @jobs.each do |job| %>
 
   <div id="job_color">
@@ -13,9 +17,9 @@
 
  <p>
  	
- 	<h3><%= link_to("show", job_path(job)) %></h3>
+ 	<h3><%= link_to("Select Job", job_path(job)) %></h3>
  </p>
- 	<h3><%= link_to("Terminate", job_path(job), method: :delete) %></h3>
+ 	<h3><%= link_to("Cancel Job", job_path(job), method: :delete) %></h3>
  </p>
  </div>
  <% end %>

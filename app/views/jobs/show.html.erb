@@ -1,19 +1,24 @@
+<body id = "job_color">
+
+<div id="board4">
 <h1><%= @job.description%> <%= @job.description%></h1>
+</div>
 
-
-<p<strong><%= @job.description%></strong></p>
-
-
+<div id="board3">
+<h2>Available Boats</h2>
+</div>
 <% @boats.each do |b| %>
 
 <p>
-<%=b.name %>: <%=b.location %>
+<h3 id="board5"><%=b.name %></h3> 
+<h3>Starting Point: <%=b.location %></h3>
 </p>
 
 <p>
 <!-- The post_path(p) takes you to the author of the post. -->
- <%= link_to("Assign Boat", assign_job_path(@job.id, b.id)) %>
+<p id="cancel"><%= link_to("Assign Boat", assign_job_path(@job.id, b.id)) %></p>
  </p>
- <p>
-
+ 
 <% end %>
+
+</body>

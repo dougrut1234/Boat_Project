@@ -32,6 +32,31 @@
 	padding-right: 300px;
 }
 
+#board3 {
+	background-color: green;
+	padding-left: 20px
+}
+
+#board4 {
+	font-family: impact;
+	font-size: 24px;
+	background-color: gray;
+}
+
+#board5 {
+	font-family: impact;
+	font-size: 24px;
+	background-color: aqua;
+}
+
+#board6 {
+	font-family: impact;
+	font-size: 84px;
+	background-color: gray;
+	padding-left: 30px;
+
+}
+
 #color {
 	background-color: aqua;
 	padding: 1px;
@@ -57,7 +82,7 @@ h3 {
 }
 
 #notice {
-  background-color: red;
+  background-color: green;
   color: white;
   padding: 10px;
   border-radius: 2px;
@@ -72,4 +97,21 @@ h3 {
 
 #text_area {
 	margin-top: 5px;
+}
+
+#cancel {
+	margin-left: 20px;
+	font-size: 20px;
+}
+
+#welcome {
+	font-size: 64px;
+	font-family: arial;
+	background-color: gray;
+}
+
+#photo {
+	float: right;
+	margin-top: -180px;
+	margin-right: 100px;
 }

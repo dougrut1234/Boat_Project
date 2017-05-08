@@ -16,6 +16,7 @@ end
 def create
 	@job = Job.new(job_params)
 		if @job.save
+			flash[:notice] = "Your job created successfully."
 			redirect_to "/jobs/"
 		else
 			flash[:notice] = "Your job was NOT created."

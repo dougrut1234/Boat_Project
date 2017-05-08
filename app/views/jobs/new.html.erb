@@ -1,4 +1,7 @@
+<body id ="job_color">
+
 <h1>Create A Job</h1>
+
 <!-- This CREATES the user...since Create corresponds to NEW -->
 
 <div>
@@ -30,4 +33,7 @@ Destination: <%= form.select(:destination, options_for_select([['London', 'Londo
 
 <%= form.submit "Create" %>
 <% end %>
+
+<%= link_to("Job Board", "/jobs/")%>
+</body>
 

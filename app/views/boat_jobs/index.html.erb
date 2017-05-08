@@ -1,8 +1,19 @@
-<p>Hello World</p>
+<strong id="board2">ASSIGNMENTS</strong>
+
+<body id="color">
+</body>
+
+<%= link_to("Job Board", "/jobs/")%>
+<%= link_to("Boat Board", "/boats/")%>
 
 <% @boat_jobs.each do |b| %>
+<h2>Job #<%= b.id %></h2>
+<h4><%= b.job.description %> has been assigned to <u><%= b.boat.name%></u> and heading to <%=b.job.destination%>.</h4>
 
-<%= b.boat_id %>
-
+ <p id="cancel">
+ <%= link_to("Cancel Assignment", boat_job_path(b), method: :delete) %>
+ </p>
+ 
 
 <% end %>
+ 

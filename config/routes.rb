@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
  get "/" => "home#index", as: "home"
  get "/assignjobs/:job_id/jobs/:boat_id" => "boat_jobs#create", as: "assign_job"
- get "/assignjobs/:job_id/jobs/:boat_id/show" => "boat_jobs#show", as: "show_assign_job"
+ 
 
  devise_for :users
  

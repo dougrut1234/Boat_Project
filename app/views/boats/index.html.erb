@@ -10,8 +10,9 @@
   	<h4>Location: <%= b.location %></h4>
   	<h4>Amount of containers: <%= b.amount_of_containers %></h4>
  <p>
- 
- 	<h3><%= link_to("Cancel", boat_path(b), method: :delete) %></h3>
+
+	<h3><%= link_to("Show", boat_path(b)) %></h3>
+ 	<h3><%= link_to("Terminate", boat_path(b), method: :delete) %></h3>
 
 
  </p>

@@ -1,15 +1,15 @@
 class BoatJobsController < ApplicationController
 
 def index
-	@boats_jobs = Boat.all
+	@boat_jobs = BoatJob.all
 end
 
 def show
-	@boat_job = Boat.find(params[:id])
+	@boat_job = BoatJob.find(params[:id])
 end
 
 def new
-	@boat_job = Boat.new
+	@boat_job = BoatJob.new
 end
 
 def create
@@ -19,11 +19,19 @@ def create
 	@boat_job.boat_id = params[:boat_id]
 	@boat_job.job_id = params[:job_id]
 	if @boat_job.save
-		redirect_to "/boat_jobs/"
+		flash[:notice] = "Job Assigned Successfully."
+		redirect_to boat_jobs_path
 	else
 		render "new"
 	end
 end
+
+ def destroy
+    BoatJob.find(params[:id]).destroy
+    	redirect_to "/boat_jobs/"
+  end
+
+
 
 # private
 

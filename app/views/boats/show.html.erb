@@ -1,1 +1,10 @@
-<%= @boat.name %>
+<body id="job_color"></body>
+
+
+<h3 id="board6"><%= @boat.name %></h3>
+	<h4>Boat Name: <%= @boat.name %></h4>
+  	<h4>Location: <%= @boat.location %></h4>
+  	<h4>Amount of containers: <%= @boat.amount_of_containers %></h4>
+	<div id ="photo"><%= image_tag @boat.avatar(:medium) %></div>
+	<h2><%= link_to("Back to Boats", "/boats/") %></h2>
+
