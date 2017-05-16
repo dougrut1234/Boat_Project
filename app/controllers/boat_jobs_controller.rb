@@ -18,11 +18,17 @@ def create
 	#Don't need line 18 & 19 when you do private. 
 	@boat_job.boat_id = params[:boat_id]
 	@boat_job.job_id = params[:job_id]
-	if @boat_job.save
-		flash[:notice] = "Job Assigned Successfully."
-		redirect_to boat_jobs_path
-	else
-		render "new"
+	@boat_job.save
+
+	# if @boat_job.save
+	# 	flash[:notice] = "Job Assigned Successfully."
+	# 	redirect_to boat_jobs_path
+	# else
+	# 	render "new"
+	# end
+	
+	respond_to do |format|
+		format.js
 	end
 end
 

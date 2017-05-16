@@ -18,10 +18,12 @@
 
 <p>
 <!-- The post_path(p) takes you to the author of the post. -->
-<p id="cancel"><%= link_to("Assign Boat", assign_job_path(@job.id, b.id)) %></p>
- </p>
+<p id="cancel"><%= link_to("Assign Boat", assign_job_path(@job.id, b.id), :id => "assign_#{ b.id }", :remote => true) %></p>
+<p id="assign_<%= b.id%>"></p>
+<p id="assign2"></p> 
 
- 
+</p>
+
+
 <% end %>
-
 
