@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
  get "/" => "home#index", as: "home"
+ # The code below sets up the route specifically for boat_jobs#create and is titled "assign_job"
  get "/assignjobs/:job_id/jobs/:boat_id" => "boat_jobs#create", as: "assign_job"
  
 

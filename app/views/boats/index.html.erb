@@ -4,6 +4,7 @@
 <body id="color">
 </body>
 
+<!-- This loops through all of the boats. -->
 	<% @boats.each do |b| %>
   <div id="job_color">
   	<h4>Boat Name: <%= b.name %></h4>
@@ -11,6 +12,7 @@
   	<h4>Amount of containers: <%= b.amount_of_containers %></h4>
  <p>
 
+<!-- The link below shows the boat through the boat path and then terminates it is below. -->
 	<h3><%= link_to("Show", boat_path(b)) %></h3>
  	<h3><%= link_to("Terminate", boat_path(b), method: :delete) %></h3>
 

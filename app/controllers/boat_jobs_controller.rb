@@ -26,7 +26,7 @@ def create
 	# else
 	# 	render "new"
 	# end
-	
+	# 30 - 31...key codes to set up the javascript for USJ when we create a boat_job.
 	respond_to do |format|
 		format.js
 	end

@@ -1,26 +1,28 @@
 <body id = "job_color"></body>
+<%= link_to("All Assign Boat", assign_job_path(@job.id, b.id), :id => "assign_#{ b.id }", :remote => true) %></p>
 
 <div id="board4">
-<h1><%= @job.description%> <%= @job.description%></h1>
+	<h1><%= @job.description%> <%= @job.description%></h1>
 </div>
 
 
 <div id="board3">
-<h2>Available Boats</h2>
+	<h2>Available Boats</h2>
 </div>
+
 <% @boats.each do |b| %>
 
 <p>
-<h3 id="board5"><%=b.name %></h3> 
-<h3>Starting Point: <%=b.location %></h3>
+	<h3 id="board5"><%=b.name %></h3> 
+	<h3>Starting Point: <%=b.location %></h3>
 </p>
 
 
 <p>
-<!-- The post_path(p) takes you to the author of the post. -->
+
+	<!-- The link below sets the id in of itself so that when you click that link...you will get the name of the particular ship you clicked on -->
 <p id="cancel"><%= link_to("Assign Boat", assign_job_path(@job.id, b.id), :id => "assign_#{ b.id }", :remote => true) %></p>
 <p id="assign_<%= b.id%>"></p>
-<p id="assign2"></p> 
 
 </p>
 
